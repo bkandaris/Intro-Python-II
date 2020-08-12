@@ -64,4 +64,5 @@ while True:
     elif command == 'q':
         print("Thanks for playing!")
         exit()
-        
+    else:
+        print("unknown command")
