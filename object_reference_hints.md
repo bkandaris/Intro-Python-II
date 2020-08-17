@@ -11,7 +11,7 @@ There are 5 variables. 3 of them point to the one Room object that is the foyer:
 The remaining 2 point to the one Room object that is the outside:
 
 * `room['outside']`
-* `room['foyer'].s_to`
+* `room['foyer'].s_to`           w 
 
 ```
 room['outside'] -> Room("Outside Cave Entrance")

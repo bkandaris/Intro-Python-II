@@ -1,16 +1,20 @@
 # Implement a class to hold room information. This should have name and
 # description attributes.
-
 class Room:
-    def __init__(self, roomName, description):
-        self.roomName = roomName
+    def __init__(self, name, description):
+        self.name = name
         self.description = description
-        self.roomItems = []
         self.n_to = None
-        self.e_to = None
         self.s_to = None
+        self.e_to = None
         self.w_to = None
-    
-    def __str__(self):
-        return f"Room: {self.roomName} Description: {self.description}"
+        self.items = []
 
+    def __str__(self):
+      if self.items:
+        output = f"""{self.name}, {self.description}\n
+    There is a {", and ".join([item.name for item in self.items])} in this room."""
+        return output
+      else:
+        return f"""{self.name}, {self.description}\n
+    No items to find here."""
